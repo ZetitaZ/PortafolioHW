@@ -1,0 +1,145 @@
+:root {
+  /* Base cobre */
+  --cobre: #b87333;
+  --cobre-oscuro: #8c4a1c;
+  --gris-pizarra: #2e2e2e;
+  --crema-tenue: #f5f2ee;
+
+  /* Tonos arena */
+  --arena-clara: #f4e1c1;
+  --beige-suave: #e6d2b5;
+  --marron-arena: #c1a57b;
+  --marron-oscuro: #5c4b32;
+  --gris-calido: #8e8268;
+
+  /* Hovers */
+  --hover-blanco: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background: var(--arena-clara);
+  color: var(--crema-tenue);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--gris-pizarra);
+}
+
+.text-body {
+  font-size: 1rem;
+  color: var(--gris-pizarra);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.course-grid {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.course-card {
+  border: 1px dashed var(--cobre);
+  background: var(--gris-pizarra);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
+}
+
+.course-card:hover {
+  background: var(--marron-oscuro);
+  border-color: var(--cobre-oscuro);
+  transform: translateY(-5px);
+}
+
+.course-card h4 {
+  color: var(--arena-clara);
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  color: var(--beige-suave);
+  font-size: 0.95rem;
+  min-height: 60px;
+}
+
+.button-link {
+  background: transparent;
+  border: 1px solid var(--cobre);
+  color: var(--cobre);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.button-link:hover {
+  background: var(--cobre);
+  color: var(--crema-tenue);
+}
+
+#course-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 46, 46, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--marron-oscuro);
+  padding: 2rem;
+  border: 1px dashed var(--cobre);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  color: var(--crema-tenue);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--cobre);
+  transition: color 0.2s ease;
+}
+
+#close-modal:hover {
+  color: var(--hover-blanco);
+}
+
+#modal-description {
+  color: var(--beige-suave);
+}
+
+#modal-target {
+  color: var(--gris-calido);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+

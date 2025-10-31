@@ -3,6 +3,8 @@
 @import url(creditos.css);
 @import url(proyectos.css);
 @import url(contacto.css);
+@import url(cursos.css);
+
 :root {
   /* Base cobre */
   --cobre: #b87333;

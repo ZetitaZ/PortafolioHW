@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>H3ll0 W0rld - Proyectos</title>
+    <title>H3ll0 W0rld - Cursos</title>
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/proyectos.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +18,6 @@
   </head>
 
   <body>
-    <!--Menu navegacion-->
     <header>
       <div class="header-container">
         <h2 href="index.html" class="logo-link">&lt;H3llo W0rld/&gt;</h2>
@@ -35,73 +32,106 @@
       </div>
     </header>
 
-    <!--Section 3-->
-    <div class="contenedor-layouts">
-      <div class="layout layout-izquierdo">
-        <div class="fondo"></div>
-        <img src="../img/proyecto-1.png" alt="imagen" class="imagen" />
-        <article class="articulo">
-          <h2 class="titulo">Portafolio Emily Smith</h2>
-          <p class="parrafo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui, amet
-            non, perspiciatis ea a omnis blanditiis inventore dolorem quae
-            quaerat in eum?
-          </p>
-        </article>
-      </div>
+    <div id="our-work" class="section dark visible">
+      <h3 class="title">Nuestros cursos</h3>
+      <p class="text-body">
+        Creamos experiencias de aprendizaje que combinan práctica, curiosidad y
+        comunidad. Explora algunos de nuestros cursos destacados.
+      </p>
 
-      <!-- <div class="layout layout-derecho">
-        <div class="fondo"></div>
-        <img src="../img/proyecto-2.png" alt="imagen" class="imagen" />
-        <article class="articulo">
-          <h2 class="titulo">Layout Derecho 2</h2>
-          <p class="parrafo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui, amet
-            non, perspiciatis ea a omnis blanditiis inventore dolorem quae
-            quaerat in eum?
+      <div class="course-grid">
+        <div class="course-card" data-course="Bases de datos">
+          <h4 class="hw">Bases de datos</h4>
+          <p>
+            Curso práctico centrado en la organización y manejo de información
+            dentro de proyectos de programación.
           </p>
-        </article>
-      </div> -->
+          <button class="button-link small view-course">Ver más</button>
+        </div>
 
-          <div class="contenedor-layouts">
-      <div class="layout layout-izquierdo">
-        <div class="fondo"></div>
-        <img src="../img/proyecto-2.png" alt="imagen" class="imagen" />
-        <article class="articulo">
-          <h2 class="titulo">Portafolio Emily Smith</h2>
-          <p class="parrafo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui, amet
-            non, perspiciatis ea a omnis blanditiis inventore dolorem quae
-            quaerat in eum?
+        <div class="course-card" data-course="Programación básica">
+          <h4 class="hw">Programación básica</h4>
+          <p>
+            Curso diseñado para adquirir habilidades fundamentales de
+            programación mediante ejercicios y proyectos breves.
           </p>
-        </article>
-      </div>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
 
-      <div class="layout layout-izquierdo">
-        <div class="fondo"></div>
-        <img src="../img/proyecto-3.png" alt="imagen" class="imagen" />
-        <article class="articulo">
-          <h2 class="titulo">Layout Izquierdo 3</h2>
-          <p class="parrafo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui, amet
-            non, perspiciatis ea a omnis blanditiis inventore dolorem quae
-            quaerat in eum?
+        <div class="course-card" data-course="HTML + CSS + JS">
+          <h4 class="hw">HTML + CSS + JS</h4>
+          <p>
+            Curso enfocado en la creación de páginas web funcionales y modernas.
           </p>
-        </article>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+
+        <div class="course-card" data-course="Lógica de programación">
+          <h4 class="hw">Lógica de programación</h4>
+          <p>
+            Curso orientado a fortalecer el pensamiento lógico aplicado a la
+            programación.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+
+        <div class="course-card" data-course="Node.js">
+          <h4 class="hw">Node.js</h4>
+          <p>
+            Curso práctico sobre desarrollo del lado del servidor utilizando
+            Node.js.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+
+        <div class="course-card" data-course="IA para idiomas">
+          <h4 class="hw">IA para idiomas</h4>
+          <p>
+            Curso centrado en el uso de herramientas de inteligencia artificial
+            aplicadas al aprendizaje de idiomas.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+
+        <div class="course-card" data-course="IA para estudiantes">
+          <h4 class="hw">IA para estudiantes</h4>
+          <p>
+            Curso que integra herramientas de inteligencia artificial al estudio
+            académico.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+
+        <div class="course-card" data-course="Privacidad en Internet">
+          <h4 class="hw">Privacidad en Internet</h4>
+          <p>
+            Curso orientado a la implementación de medidas prácticas para
+            proteger la información personal en línea.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+
+        <div
+          class="course-card"
+          data-course="Protección digital para estudiantes"
+        >
+          <h4 class="hw">Protección digital para estudiantes</h4>
+          <p>
+            Curso sobre prevención de riesgos en entornos digitales, incluyendo
+            estafas, manipulación y acoso.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
       </div>
     </div>
 
-          <div class="layout layout-izquierdo">
-        <div class="fondo"></div>
-        <img src="../img/proyecto-4.png" alt="imagen" class="imagen" />
-        <article class="articulo">
-          <h2 class="titulo">Layout Izquierdo 3</h2>
-          <p class="parrafo">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Qui, amet
-            non, perspiciatis ea a omnis blanditiis inventore dolorem quae
-            quaerat in eum?
-          </p>
-        </article>
+    <!-- Modal -->
+    <div id="course-modal">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <h4 class="hw" id="modal-title"></h4>
+        <p id="modal-description"></p>
+        <p id="modal-target"></p>
       </div>
     </div>
 
@@ -121,14 +151,14 @@
           </a>
 
           <!-- Correo -->
-          <a href="mailto:h3ll0.w0rld.bo@proton.me" class="info-contacto">
+          <a href="mailto:mdmt_dani@hotmail.com" class="info-contacto">
             <i class="fa-solid fa-envelope"></i>
             <p>h3ll0.w0rld.bo@proton.me</p>
           </a>
 
           <!-- Facebook -->
           <a
-            href="https://www.facebook.com/profile.php?id=61577173317692&sk=about"
+            href="https://www.facebook.com/profile.php?id=100057609362447"
             class="info-contacto"
           >
             <i class="fa-brands fa-facebook"></i>
@@ -145,7 +175,7 @@
             <i class="fa-solid fa-handshake"></i>
             <p>Información de Cursos</p>
           </a>
-          <a href="proyectos.html" class="opcion-menu">
+          <a href="paginas/proyectos.html" class="opcion-menu">
             <i class="fa-solid fa-notes-medical"></i>
             <p>Nuestros Proyectos</p>
           </a>
@@ -209,5 +239,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="../scripts/app.js"></script>
   </body>
 </html>
