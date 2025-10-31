@@ -44,7 +44,6 @@ footer {
   background-color: var(--hover-blanco);
   color: var(--gris-pizarra);
   border-radius: 5px;
-  /* font-weight: bold; */
 }
 
 .fa-solid,

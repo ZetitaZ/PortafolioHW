@@ -29,30 +29,7 @@ const coursesInfo = {
     target:
       "Dirigido a: desarrolladores con conocimientos previos de JavaScript interesados en el desarrollo backend.",
   },
-  "IA para idiomas": {
-    description:
-      "Curso centrado en el uso de herramientas de inteligencia artificial aplicadas al aprendizaje de idiomas. Se exploran prácticas de conversación, corrección de textos y ejercicios de pronunciación mediante aplicaciones y modelos de lenguaje.",
-    target:
-      "Dirigido a: estudiantes y autodidactas que buscan complementar el aprendizaje de un idioma con recursos tecnológicos.",
-  },
-  "IA para estudiantes": {
-    description:
-      "Curso que integra herramientas de inteligencia artificial al estudio académico. Se utilizan recursos para organizar información, generar resúmenes, crear cuestionarios y apoyar la planificación del aprendizaje.",
-    target:
-      "Dirigido a: estudiantes de secundaria o universitarios interesados en optimizar su estudio mediante el uso de IA.",
-  },
-  "Privacidad en Internet": {
-    description:
-      "Curso orientado a la implementación de medidas prácticas para proteger la información personal en línea. Incluye gestión de contraseñas, configuración de dispositivos y buenas prácticas de seguridad digital.",
-    target:
-      "Dirigido a: usuarios habituales de Internet que buscan reducir riesgos y mantener el control sobre sus datos.",
-  },
-  "Protección digital para estudiantes": {
-    description:
-      "Curso sobre prevención de riesgos en entornos digitales, incluyendo estafas, manipulación, acoso y robo de identidad. Se presentan estrategias concretas para proteger la seguridad y el bienestar personal online.",
-    target:
-      "Dirigido a: estudiantes, docentes y familias interesados en fortalecer la seguridad digital y el uso responsable de Internet.",
-  },
+
 };
 
 const modal = document.getElementById("course-modal");

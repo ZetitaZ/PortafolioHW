@@ -31,10 +31,11 @@
 /* Fondo difuminado */
 .layout .fondo {
   border-radius: 14px;
-  box-shadow: 0 0 25px -8px var(--gris-pizarra);
+  /* box-shadow: 0 0 25px -8px var(--gris-pizarra); */
   transition: 0.4s;
   backdrop-filter: blur(6px);
-  opacity: 0.6;
+  /* opacity: 0.6; */
+  background-color: var(--gris-pizarra);
 }
 
 /* Artículo encima de la imagen (siempre visible y al frente) */
@@ -54,11 +55,11 @@
 .layout-izquierdo .fondo {
   grid-column: 2/7;
   grid-row: 2/8;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     rgba(139, 92, 60, 0.8) 0%,
     rgba(233, 216, 190, 0.4) 100%
-  );
+  ); */
 }
 
 .layout-izquierdo .imagen {
