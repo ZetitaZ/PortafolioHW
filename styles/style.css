@@ -1,0 +1,108 @@
+@import url(menu.css);
+@import url(info.css);
+@import url(creditos.css);
+@import url(proyectos.css);
+@import url(contacto.css);
+:root {
+  /* Base cobre */
+  --cobre: #b87333;
+  --cobre-oscuro: #8c4a1c;
+  --gris-pizarra: #2e2e2e;
+  --crema-tenue: #f5f2ee;
+
+  /* Tonos arena */
+  --arena-clara: #f4e1c1;
+  --beige-suave: #e6d2b5;
+  --marron-arena: #c1a57b;
+  --marron-oscuro: #5c4b32;
+  --gris-calido: #8e8268;
+
+  /* Hovers */
+  --hover-blanco: rgba(255, 255, 255, 0.6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  padding-top: 80px;
+}
+/* ===== PRESENTACIÓN ===== */
+.presentacion {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--gris-pizarra);
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.presentacion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/HW-logo-rectangular.jpg") center/cover no-repeat;
+  filter: blur(12px) brightness(0.8);
+  transform: scale(1.1); /* evita bordes duros por el blur */
+  z-index: 0;
+}
+
+.presentacion-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  background: var(--hover-blanco);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+.presentacion h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--cobre-oscuro);
+}
+
+.presentacion p {
+  font-size: 1.2rem;
+  color: var(--gris-pizarra);
+  line-height: 1.6;
+}
+
+/* ===== INFORMACIÓN ===== */
+.informacion {
+  background-color: var(--beige-suave);
+  text-align: center;
+  color: var(--gris-pizarra);
+  padding: 80px 20px;
+  transition: 0.4s;
+}
+
+.info-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.informacion h2 {
+  font-size: 2rem;
+  color: var(--cobre-oscuro);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.informacion p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  color: var(--gris-calido);
+}

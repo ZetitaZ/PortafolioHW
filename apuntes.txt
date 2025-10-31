@@ -1,0 +1,11 @@
+1. Capacitaciones => Muestra los pedefes
+2. Examenes medicos => Nuestros Proyectos
+3. Servicios => Cursos
+
+
+La pagina de cursos debe tener un boton para descar el folleto en PDF
+
+
+CON JS
+1. MENU RICO
+2. Año actualizable xd

@@ -1,0 +1,158 @@
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--gris-pizarra);
+  width: 100%;
+  color: #fff;
+  transition: 0.4s;
+  padding-top: 20px;
+}
+
+.info-footer {
+  display: flex;
+  gap: 200px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.linea-vertical {
+  border-left: 1px solid #fff;
+  height: 150px;
+  margin: 0 50px;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.info-contacto {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.info-contacto p {
+  margin-left: 10px;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.info-contacto:hover p {
+  background-color: var(--hover-blanco);
+  color: var(--gris-pizarra);
+  border-radius: 5px;
+  /* font-weight: bold; */
+}
+
+.fa-solid,
+.fa-brands {
+  font-size: 25px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.menu-footer {
+  margin-top: 20px;
+}
+
+.menu-footer a {
+  display: block;
+  color: #fff;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.menu-footer p {
+  display: inline-block;
+  padding: 5px;
+}
+
+.opcion-menu:hover p {
+  background-color: var(--hover-blanco);
+  color: var(--gris-pizarra);
+  border-radius: 5px;
+
+  /* font-weight: bold; */
+}
+
+/* ===== DESARROLLADORES ===== */
+.desarrollo {
+  background-color: var(--gris-pizarra);
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  user-select: none;
+}
+
+.nombre-desarrolladores {
+  cursor: pointer;
+  color: var(--gris-pizarra);
+}
+
+.desarrollo span  {
+    color: #fff;
+}
+
+.nombre {
+  font-weight: bold;
+  color: var(--cobre-oscuro);
+  text-decoration: underline;
+}
+
+.info-desarrolladores {
+  position: fixed; /* o absolute si prefieres que siga al footer */
+  bottom: 60px; /* o ajusta según el alto del footer */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.4s;
+  background: var(--arena-clara);
+  border: 2px solid var(--cobre);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 100;
+}
+
+.info-desarrollador {
+  margin: auto;
+  text-align: center;
+}
+
+.info-desarrollador p {
+  color: var(--gris-pizarra);
+  transition: 0.3s;
+}
+
+.info-desarrollador:hover p {
+  color: var(--cobre-oscuro);
+  background-color: var(--arena-clara);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.info-desarrollador .fa-whatsapp {
+  color: var(--cobre);
+}
+
+.cerrar-contacto-desarrolladores {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  color: var(--gris-pizarra);
+  font-size: 1.2rem;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ .info-desarrolladores {
+  display: flex;
+  transition: 0.4s;
+  gap: 2rem;
+}
