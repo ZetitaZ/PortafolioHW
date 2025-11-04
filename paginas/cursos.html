@@ -5,20 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>H3ll0 W0rld - Cursos</title>
         <link rel="stylesheet" href="../styles/style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com " />
-        <link rel="preconnect" href="https://fonts.googleapis.com " />
-        <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap "
+            href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Noto+Sans+KR:wght@100..900&display=swap"
             rel="stylesheet"
         />
-        <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap "
-            rel="stylesheet"
-        />
+
         <script
-            src="https://kit.fontawesome.com/c964ebe0fe.js "
+            src="https://kit.fontawesome.com/c964ebe0fe.js"
             crossorigin="anonymous"
         ></script>
     </head>
@@ -26,9 +22,9 @@
     <body>
         <header>
             <div class="header-container">
-                <h2 href="index.html" class="logo-link">
-                    &lt;H3llo W0rld/&gt;
-                </h2>
+                <a href="../index.html" class="logo-link">
+                    <h2>&lt;H3llo W0rld/&gt;</h2>
+                </a>
                 <nav class="menu">
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
@@ -48,7 +44,7 @@
             </div>
         </header>
 
-        <div id="our-work" class="section dark visible">
+        <section id="our-work" class="section dark visible">
             <h3 class="title">Nuestros cursos</h3>
             <p class="text-body">
                 Creamos experiencias de aprendizaje que combinan práctica,
@@ -112,7 +108,6 @@
                     </button>
                 </div>
 
-                <!-- NUEVOS CURSOS IA -->
                 <div class="course-card" data-course="IA para el estudio">
                     <h4 class="hw">IA para el estudio</h4>
                     <p>
@@ -136,16 +131,14 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Modal -->
         <div id="course-modal">
             <div class="modal-content">
                 <span id="close-modal">&times;</span>
                 <h4 class="hw" id="modal-title"></h4>
                 <p id="modal-description"></p>
 
-                <!-- Nuevos datos -->
                 <p>
                     <strong>Duración:</strong> <span id="modal-duration"></span>
                 </p>
@@ -155,24 +148,16 @@
                     <strong>Requisitos:</strong>
                     <span id="modal-requirements"></span>
                 </p>
-                <p>
-                    <strong>Inicio de clases:</strong>
-                    <span id="modal-date"></span>
-                </p>
                 <p><strong>Costo:</strong> <span id="modal-price"></span></p>
-
                 <p id="modal-target"></p>
             </div>
         </div>
 
-        <!--Footer-->
         <footer>
             <div class="info-footer" id="info-footer">
-                <!-- Contacto -->
                 <div class="contacto">
-                    <!-- Whatsapp -->
                     <a
-                        href="https://api.whatsapp.com/send/?phone=76500461&text&type=phone_number&app_absent=0 "
+                        href="https://api.whatsapp.com/send/?phone=76500461&text&type=phone_number&app_absent=0"
                         target="_blank"
                         class="info-contacto"
                     >
@@ -180,7 +165,6 @@
                         <p>+591 76500461</p>
                     </a>
 
-                    <!-- Correo -->
                     <a
                         href="mailto:mdmt_dani@hotmail.com"
                         class="info-contacto"
@@ -189,9 +173,8 @@
                         <p>h3ll0.w0rld.bo@proton.me</p>
                     </a>
 
-                    <!-- Facebook -->
                     <a
-                        href="https://www.facebook.com/profile.php?id=100057609362447 "
+                        href="https://www.facebook.com/profile.php?id=100057609362447"
                         class="info-contacto"
                     >
                         <i class="fa-brands fa-facebook"></i>
@@ -199,26 +182,22 @@
                     </a>
                 </div>
 
-                <!-- Separador Vertical -->
                 <div class="linea-vertical"></div>
 
-                <!-- Menu del footer -->
                 <div class="menu-footer">
                     <a href="./cursos.html" class="opcion-menu">
                         <i class="fa-solid fa-handshake"></i>
                         <p>Información de Cursos</p>
                     </a>
-                    <a href="paginas/proyectos.html" class="opcion-menu">
+                    <a href="../paginas/proyectos.html" class="opcion-menu">
                         <i class="fa-solid fa-notes-medical"></i>
                         <p>Nuestros Proyectos</p>
                     </a>
                 </div>
             </div>
 
-            <!-- Creditos -->
             <div class="desarrollo">
-                <input type="checkbox" name="cesar" id="check" />
-
+                <input type="checkbox" id="check" />
                 <label for="check" class="nombre-desarrolladores">
                     <span>&#169;</span>
                     <span class="nombre">Diaz Cesar</span>
@@ -235,38 +214,29 @@
                     >
                     <div class="info-desarrollador">
                         <a
-                            href="https://api.whatsapp.com/send/?phone=73054902&text&type=phone_number&app_absent=0 "
+                            href="https://api.whatsapp.com/send/?phone=73054902&text&type=phone_number&app_absent=0"
                             target="_blank"
                         >
                             <i class="fa-brands fa-whatsapp"></i>
-                            <p>
-                                Cesar<br />
-                                +591 73054902
-                            </p>
+                            <p>Cesar<br />+591 73054902</p>
                         </a>
                     </div>
                     <div class="info-desarrollador">
                         <a
-                            href="https://api.whatsapp.com/send/?phone=73737838&text&type=phone_number&app_absent=0 "
+                            href="https://api.whatsapp.com/send/?phone=73737838&text&type=phone_number&app_absent=0"
                             target="_blank"
                         >
                             <i class="fa-brands fa-whatsapp"></i>
-                            <p>
-                                Leandro<br />
-                                +591 73737838
-                            </p>
+                            <p>Leandro<br />+591 73737838</p>
                         </a>
                     </div>
                     <div class="info-desarrollador">
                         <a
-                            href="https://api.whatsapp.com/send/?phone=69828762&text&type=phone_number&app_absent=0 "
+                            href="https://api.whatsapp.com/send/?phone=69828762&text&type=phone_number&app_absent=0"
                             target="_blank"
                         >
                             <i class="fa-brands fa-whatsapp"></i>
-                            <p>
-                                José<br />
-                                +591 69828762
-                            </p>
+                            <p>José<br />+591 69828762</p>
                         </a>
                     </div>
                 </div>
@@ -281,151 +251,150 @@
                 const modalDescription =
                     document.getElementById("modal-description");
                 const modalTarget = document.getElementById("modal-target");
-
-                /* Nuevos elementos */
                 const modalDuration = document.getElementById("modal-duration");
                 const modalSyllabus = document.getElementById("modal-syllabus");
                 const modalRequirements =
                     document.getElementById("modal-requirements");
-                const modalDate = document.getElementById("modal-date");
                 const modalPrice = document.getElementById("modal-price");
-
                 const closeModal = document.getElementById("close-modal");
 
                 const courseDetails = {
                     "Bases de datos": {
                         description:
-                            "Curso práctico centrado en la organización y manejo de información dentro de proyectos de programación.",
+                            "Descubre cómo gestionar y organizar eficazmente datos empresariales y profesionales mediante el diseño y uso adecuado de bases de datos.",
                         target: "Dirigido a estudiantes que desean dominar el manejo de datos en aplicaciones reales.",
-                        duration: "6 semanas (2 encuentros semanales)",
+                        duration: "15 horas",
                         syllabus: [
-                            "Modelo relacional",
-                            "SQL avanzado",
-                            "MySQL / PostgreSQL",
+                            "Introducción",
+                            "Motores importantes",
+                            "Diagrama entidad - relación",
                             "Normalización",
-                            "Índices y optimización",
+                            "Claves primarias y foráneas",
+                            "Prácticas",
                         ],
                         requirements: "Conocimientos básicos de programación.",
-                        date: "15 de enero 2025",
-                        price: "350 Bs",
+                        price: "150 Bs",
                     },
                     "Programación básica": {
                         description:
                             "Curso diseñado para adquirir habilidades fundamentales de programación mediante ejercicios y proyectos breves.",
                         target: "Ideal para principiantes sin experiencia previa en programación.",
-                        duration: "4 semanas (2 encuentros semanales)",
+                        duration: "15 horas",
                         syllabus: [
-                            "Pseudocódigo",
+                            "Introducción",
+                            "Configuración del entorno",
                             "Variables y tipos",
-                            "Estructuras condicionales",
+                            "Condicionales",
                             "Bucles",
-                            "Funciones básicas",
+                            "Vectores",
+                            "Funciones",
+                            "Introducción a la poo",
+                            "Proyecto final",
                         ],
                         requirements: "Ninguno.",
-                        date: "8 de enero 2025",
-                        price: "250 Bs",
+                        price: "150 Bs",
                     },
                     "HTML + CSS + JS": {
                         description:
-                            "Curso enfocado en la creación de páginas web funcionales y modernas.",
+                            "Aprende a plasmar tus ideas en un sitio web, desde el diseño, la condimentacion, usabilidad, estética y la implementación de proyectos personales.",
                         target: "Perfecto para quienes quieren iniciarse en el desarrollo web frontend.",
-                        duration: "5 semanas (2 encuentros semanales)",
+                        duration: "9 horas",
                         syllabus: [
-                            "HTML5 semántico",
-                            "CSS3 y Flexbox/Grid",
-                            "JavaScript básico",
+                            "Instalación de vscode y extensiones",
+                            "CSS3",
+                            "Interactividad",
                             "DOM y eventos",
-                            "Deploy con GitHub Pages",
+                            "Deploy en plataformas gratuitas",
                         ],
-                        requirements: "Manejo de archivos y carpetas.",
-                        date: "22 de enero 2025",
-                        price: "400 Bs",
+                        requirements: "Computadora e internet",
+                        price: "150 Bs",
                     },
                     "Lógica de programación": {
                         description:
-                            "Curso orientado a fortalecer el pensamiento lógico aplicado a la programación.",
+                            "Aprende a pensar como un desarrollador usando la lógica de programación a partir de ejemplos de la vida cotidiana.",
                         target: "Recomendado como base antes de aprender cualquier lenguaje de programación.",
-                        duration: "3 semanas (2 encuentros semanales)",
+                        duration: "9 horas",
                         syllabus: [
-                            "Algoritmos y diagramas de flujo",
-                            "Pensamiento computacional",
-                            "Resolución de problemas",
-                            "Práctica con pseudocódigo",
+                            "¿Qué es la programación?",
+                            "Ejemplos reales",
+                            "Diagramas de flujo",
+                            "Ejercicios",
                         ],
                         requirements: "Ninguno.",
-                        date: "1 de febrero 2025",
-                        price: "200 Bs",
+                        price: "100 Bs",
                     },
                     "Node.js": {
                         description:
-                            "Curso práctico sobre desarrollo del lado del servidor utilizando Node.js.",
+                            "Crea tu primer sistema web en javascript con el runtime nodejs y express para poder implementar proyectos y desplegar tus ideas.",
                         target: "Para estudiantes con conocimientos previos en JavaScript que desean expandirse al backend.",
-                        duration: "6 semanas (2 encuentros semanales)",
+                        duration: "30 horas",
                         syllabus: [
-                            "Módulos y NPM",
-                            "Express y rutas",
-                            "Middlewares",
-                            "MongoDB básico",
-                            "RESTful API",
+                            "¿Qué es node?",
+                            "Conceptos fundamentales",
+                            "Instalación de herramientas",
+                            "Instalación de de dependencias con npm",
+                            "Inicialización del proyecto",
+                            "Controladores",
+                            "Rutas",
+                            "Frontend",
                         ],
                         requirements: "JavaScript intermedio.",
-                        date: "5 de febrero 2025",
-                        price: "450 Bs",
+                        date: "30 horas",
+                        price: "250 Bs",
                     },
-                    /* ===== NUEVOS CURSOS IA ===== */
                     "IA para el estudio": {
                         description:
-                            "Descubre cómo usar inteligencia artificial para organizar tu tiempo, repasar contenidos y mejorar tus calificaciones.",
+                            "Utiliza la inteligencia artifical para obtener una ventaja académica y prepararte para tus estudios universitarios, proyectos personales y más.",
                         target: "Estudiantes de cualquier nivel que quieran estudiar menos y aprender más.",
-                        duration: "3 semanas (2 encuentros semanales)",
+                        duration: "5 horas",
                         syllabus: [
-                            "Chatbots como tutores personales",
+                            "Servicios gratuitos",
                             "Generación de resúmenes y mapas mentales",
                             "Revisión activa con flashcards automáticos",
-                            "Planificación de horarios adaptativos",
-                            "Herramientas gratuitas y de pago",
+                            "Preparación de examenes",
+                            "Técnicas de estudio",
+                            "Notebooklm",
                         ],
                         requirements: "Ninguno. Trae tu laptop o tablet.",
-                        date: "12 de febrero 2025",
-                        price: "220 Bs",
+                        price: "60 Bs",
                     },
                     "IA para idiomas": {
                         description:
-                            "Acelera tu aprendizaje de idiomas con asistentes de IA: conversación, pronunciación y vocabulario personalizado.",
+                            "Impulsa tu aprendizaje de idiomas con inteligencia artificial, practicando conversaciones y disfrutando de historias interactivas y juegos gramaticales.",
                         target: "Personas que estudian inglés, portugués o cualquier idioma y quieren practicar diariamente.",
-                        duration: "4 semanas (2 encuentros semanales)",
+                        duration: "5 horas",
                         syllabus: [
-                            "Chat de voz con IA en el idioma objetivo",
-                            "Corrección de pronunciación en tiempo real",
-                            "Generación de historias y diálogos personalizados",
+                            "Práctica conversacional",
+                            "Uso de historias para aprender idiomas",
+                            "Planteamiento de ejercicios",
                             "Expresiones idiomáticas y culturales",
-                            "Apps y extensiones recomendadas",
+                            "Juegos gramaticales",
                         ],
                         requirements:
                             "Nivel básico del idioma que quieres practicar.",
-                        date: "19 de febrero 2025",
-                        price: "280 Bs",
+                        price: "60 Bs",
                     },
                 };
 
                 document.querySelectorAll(".view-course").forEach((button) => {
                     button.addEventListener("click", (e) => {
                         const card = e.target.closest(".course-card");
+                        if (!card) return;
                         const courseName = card.dataset.course;
                         const details = courseDetails[courseName];
+                        if (!details) return;
 
                         modalTitle.textContent = courseName;
-                        modalDescription.textContent = details.description;
-                        modalTarget.textContent = details.target;
-
-                        /* Rellena los nuevos campos */
-                        modalDuration.textContent = details.duration;
-                        modalRequirements.textContent = details.requirements;
-                        modalDate.textContent = details.date;
-                        modalPrice.textContent = details.price;
+                        modalDescription.textContent =
+                            details.description || "";
+                        modalTarget.textContent = details.target || "";
+                        modalDuration.textContent = details.duration || "";
+                        modalRequirements.textContent =
+                            details.requirements || "";
+                        modalPrice.textContent = details.price || "";
 
                         modalSyllabus.innerHTML = "";
-                        details.syllabus.forEach((item) => {
+                        (details.syllabus || []).forEach((item) => {
                             const li = document.createElement("li");
                             li.textContent = item;
                             modalSyllabus.appendChild(li);
@@ -440,9 +409,7 @@
                 });
 
                 modal.addEventListener("click", (e) => {
-                    if (e.target === modal) {
-                        modal.style.display = "none";
-                    }
+                    if (e.target === modal) modal.style.display = "none";
                 });
             });
         </script>
