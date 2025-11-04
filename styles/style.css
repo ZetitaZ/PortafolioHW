@@ -4,7 +4,7 @@
 @import url(proyectos.css);
 @import url(contacto.css);
 @import url(cursos.css);
-
+@import url(scroll-up.css);
 :root {
   /* Base cobre */
   --cobre: #b87333;
@@ -21,6 +21,7 @@
 
   /* Hovers */
   --hover-blanco: rgba(255, 255, 255, 0.6);
+  scroll-behavior: smooth;
 }
 
 * {
@@ -33,17 +34,18 @@
 
 body {
   padding-top: 80px;
+  width: 100%;
 }
 /* ===== PRESENTACIÓN ===== */
 .presentacion {
   position: relative;
-  height: 70vh;
+  height: 80dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--gris-pizarra);
-  padding: 50px 20px;
+  padding: 70px 20px;
   overflow: hidden;
 }
 

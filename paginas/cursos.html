@@ -18,14 +18,23 @@
   </head>
 
   <body>
+    <!--Menu navegacion-->
     <header>
       <div class="header-container">
-        <h2 href="index.html" class="logo-link">&lt;H3llo W0rld/&gt;</h2>
-        <nav class="menu">
+        <h2 class="logo-link">&lt;H3llo W0rld/&gt;</h2>
+
+        <!-- Botón Hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="menu" id="menu">
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../paginas/cursos.html">Información de Cursos</a></li>
-            <li><a href="../paginas/proyectos.html">Nuestros Proyectos</a></li>
+            <li><a href="cursos.html">Información de Cursos</a></li>
+            <li><a href="proyectos.html">Nuestros Proyectos</a></li>
             <li><a href="#info-footer">Contacto</a></li>
           </ul>
         </nav>
@@ -83,7 +92,6 @@
           </p>
           <button class="button-link small view-course">Ver más</button>
         </div>
-
       </div>
     </div>
 
@@ -104,12 +112,12 @@
         <div class="contacto">
           <!-- Whatsapp -->
           <a
-            href="https://api.whatsapp.com/send/?phone=76500461&text&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=69828762&text&type=phone_number&app_absent=0"
             target="_blank"
             class="info-contacto"
           >
             <i class="fa-brands fa-whatsapp"></i>
-            <p>+591 76500461</p>
+            <p>+591 69828762</p>
           </a>
 
           <!-- Correo -->
@@ -120,7 +128,8 @@
 
           <!-- Facebook -->
           <a
-            href="https://www.facebook.com/profile.php?id=100057609362447"
+            href="https://www.facebook.com/profile.php?id=61577173317692"
+            target="_blank"
             class="info-contacto"
           >
             <i class="fa-brands fa-facebook"></i>
@@ -133,7 +142,7 @@
 
         <!-- Menu del footer -->
         <div class="menu-footer">
-          <a href="./cursos.html" class="opcion-menu">
+          <a href="./paginas/cursos.html" class="opcion-menu">
             <i class="fa-solid fa-handshake"></i>
             <p>Información de Cursos</p>
           </a>
@@ -150,8 +159,8 @@
 
         <label for="check" class="nombre-desarrolladores">
           <span>&#169;</span>
-          <span class="nombre">Diaz Cesar</span>
-          <span>&#38;</span>
+          <span class="nombre">Diaz Cesar, </span>
+          <!-- <span>&#38;</span> -->
           <span class="nombre">Solorzano Leandro</span>
           <span>&#38;</span>
           <span class="nombre">Ferrari José</span>
@@ -202,6 +211,13 @@
       </div>
     </footer>
 
+    <!-- Botón Volver Arriba -->
+    <button id="btn-subir" title="Volver arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
     <script src="../scripts/app.js"></script>
   </body>
+  <script src="../js/menu-dinamico.js"></script>
+  <script src="../js/scroll-up.js"></script>
 </html>

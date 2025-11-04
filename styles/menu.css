@@ -21,17 +21,14 @@ header {
 }
 
 /* Logo */
-.logo {
-  height: 60px;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
 .logo-link {
   color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s;
 }
-.logo:hover {
-  transform: scale(1.1);
+.logo-link:hover {
+  transform: scale(1.05);
 }
 
 /* Menu */
@@ -58,4 +55,65 @@ header {
 .menu ul li a:hover {
   background-color: var(--hover-blanco);
   color: var(--gris-pizarra);
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Efecto del botón abierto */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100dvw;
+    background-color: var(--gris-pizarra);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .menu.active {
+    max-height: 300px; /* Altura del menú abierto */
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
 }
