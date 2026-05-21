@@ -143,3 +143,46 @@ body {
   margin-top: 0.5rem;
 }
 
+/* 🔹 Ajuste general del modal */
+#course-modal {
+  overflow-y: auto; /* Permite hacer scroll si el contenido es muy alto */
+  padding: 10px; /* margen interno más cómodo en móvil */
+}
+
+/* 🔹 Contenedor interno responsive */
+.modal-content {
+  width: 90%;
+  max-width: 600px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* 🔹 Para pantallas pequeñas (celulares en vertical) */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    max-height: 90vh; /* evita que se salga de la pantalla */
+    overflow-y: auto; /* scroll interno si es muy largo */
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  #close-modal {
+    top: 5px;
+    right: 10px;
+    font-size: 1.3rem;
+  }
+
+  .modal-content ul {
+    padding-left: 1.2rem; /* corrige la sangría en móvil */
+  }
+}
+
+/* 🔹 En tablets o pantallas medianas */
+@media (min-width: 601px) and (max-width: 900px) {
+  .modal-content {
+    width: 70%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}

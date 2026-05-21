@@ -1,0 +1,41 @@
+/* ===== BOTÓN VOLVER ARRIBA ===== */
+#btn-subir {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--cobre);
+  color: #fff;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 200;
+}
+
+#btn-subir:hover {
+  background-color: var(--cobre-oscuro);
+  transform: translateY(-4px);
+}
+
+#btn-subir.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Versión móvil */
+@media (max-width: 600px) {
+  #btn-subir {
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

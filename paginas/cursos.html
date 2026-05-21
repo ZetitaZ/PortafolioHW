@@ -18,21 +18,30 @@
   </head>
 
   <body>
+    <!--Menu navegacion-->
     <header>
       <div class="header-container">
-        <h2 href="index.html" class="logo-link">&lt;H3llo W0rld/&gt;</h2>
-        <nav class="menu">
+        <h2 class="logo-link">&lt;H3llo W0rld/&gt;</h2>
+
+        <!-- Botón Hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="menu" id="menu">
           <ul>
             <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../paginas/cursos.html">Información de Cursos</a></li>
-            <li><a href="../paginas/proyectos.html">Nuestros Proyectos</a></li>
+            <li><a href="cursos.html">Información de Cursos</a></li>
+            <li><a href="proyectos.html">Nuestros Proyectos</a></li>
             <li><a href="#info-footer">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <div id="our-work" class="section dark visible">
+    <section id="our-work" class="section dark visible">
       <h3 class="title">Nuestros cursos</h3>
       <p class="text-body">
         Creamos experiencias de aprendizaje que combinan práctica, curiosidad y
@@ -84,15 +93,40 @@
           <button class="button-link small view-course">Ver más</button>
         </div>
 
-      </div>
-    </div>
+        <div class="course-card" data-course="IA para el estudio">
+          <h4 class="hw">IA para el estudio</h4>
+          <p>
+            Descubre cómo usar inteligencia artificial para organizar tu tiempo,
+            repasar contenidos y mejorar tus calificaciones.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
 
-    <!-- Modal -->
+        <div class="course-card" data-course="IA para idiomas">
+          <h4 class="hw">IA para idiomas</h4>
+          <p>
+            Acelera tu aprendizaje de idiomas con asistentes de IA:
+            conversación, pronunciación y vocabulario personalizado.
+          </p>
+          <button class="button-link small view-course">Ver más</button>
+        </div>
+      </div>
+    </section>
+
     <div id="course-modal">
       <div class="modal-content">
         <span id="close-modal">&times;</span>
         <h4 class="hw" id="modal-title"></h4>
         <p id="modal-description"></p>
+
+        <p><strong>Duración:</strong> <span id="modal-duration"></span></p>
+        <p><strong>Temario:</strong></p>
+        <ul id="modal-syllabus"></ul>
+        <p>
+          <strong>Requisitos:</strong>
+          <span id="modal-requirements"></span>
+        </p>
+        <p><strong>Costo:</strong> <span id="modal-price"></span></p>
         <p id="modal-target"></p>
       </div>
     </div>
@@ -104,23 +138,24 @@
         <div class="contacto">
           <!-- Whatsapp -->
           <a
-            href="https://api.whatsapp.com/send/?phone=76500461&text&type=phone_number&app_absent=0"
+            href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0"
             target="_blank"
             class="info-contacto"
           >
             <i class="fa-brands fa-whatsapp"></i>
-            <p>+591 76500461</p>
+            <p>+591 69828762</p>
           </a>
 
           <!-- Correo -->
-          <a href="mailto:mdmt_dani@hotmail.com" class="info-contacto">
+          <a href="mailto:h3ll0.w0rld.bo@proton.me" class="info-contacto">
             <i class="fa-solid fa-envelope"></i>
             <p>h3ll0.w0rld.bo@proton.me</p>
           </a>
 
           <!-- Facebook -->
           <a
-            href="https://www.facebook.com/profile.php?id=100057609362447"
+            href="https://www.facebook.com/profile.php?id=61577173317692"
+            target="_blank"
             class="info-contacto"
           >
             <i class="fa-brands fa-facebook"></i>
@@ -133,7 +168,7 @@
 
         <!-- Menu del footer -->
         <div class="menu-footer">
-          <a href="./cursos.html" class="opcion-menu">
+          <a href="./paginas/cursos.html" class="opcion-menu">
             <i class="fa-solid fa-handshake"></i>
             <p>Información de Cursos</p>
           </a>
@@ -150,8 +185,8 @@
 
         <label for="check" class="nombre-desarrolladores">
           <span>&#169;</span>
-          <span class="nombre">Diaz Cesar</span>
-          <span>&#38;</span>
+          <span class="nombre">Diaz Cesar, </span>
+          <!-- <span>&#38;</span> -->
           <span class="nombre">Solorzano Leandro</span>
           <span>&#38;</span>
           <span class="nombre">Ferrari José</span>
@@ -164,7 +199,7 @@
           >
           <div class="info-desarrollador">
             <a
-              href="https://api.whatsapp.com/send/?phone=73054902&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=+59173054902&text&type=phone_number&app_absent=0"
               target="_blank"
             >
               <i class="fa-brands fa-whatsapp"></i>
@@ -176,7 +211,7 @@
           </div>
           <div class="info-desarrollador">
             <a
-              href="https://api.whatsapp.com/send/?phone=73737838&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=+59173737838&text&type=phone_number&app_absent=0"
               target="_blank"
             >
               <i class="fa-brands fa-whatsapp"></i>
@@ -188,7 +223,7 @@
           </div>
           <div class="info-desarrollador">
             <a
-              href="https://api.whatsapp.com/send/?phone=69828762&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0"
               target="_blank"
             >
               <i class="fa-brands fa-whatsapp"></i>
@@ -202,6 +237,13 @@
       </div>
     </footer>
 
-    <script src="../scripts/app.js"></script>
+    <!-- Botón Volver Arriba -->
+    <button id="btn-subir" title="Volver arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
   </body>
+  <script src="../js/menu-dinamico.js"></script>
+  <script src="../js/scroll-up.js"></script>
+  <script src="../js/informacion-cursos.js"></script>
 </html>
