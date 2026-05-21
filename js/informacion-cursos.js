@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalPrice = document.getElementById("modal-price");
     const closeModal = document.getElementById("close-modal");
 
+    const buyButton = document.getElementById("buy-course");
+
     const courseDetails = {
         "Bases de datos": {
             description:
@@ -129,12 +131,20 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     };
 
+    let currentCourse = null;
+
     document.querySelectorAll(".view-course").forEach((button) => {
         button.addEventListener("click", (e) => {
             const card = e.target.closest(".course-card");
             if (!card) return;
             const courseName = card.dataset.course;
             const details = courseDetails[courseName];
+
+            currentCourse = {
+                name: courseName,
+                price: details.price
+            };
+
             if (!details) return;
 
             modalTitle.textContent = courseName;
@@ -163,5 +173,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modal.addEventListener("click", (e) => {
         if (e.target === modal) modal.style.display = "none";
+    });
+
+    buyButton.addEventListener("click", () => {
+
+        if(!currentCourse) return;
+
+        const url = `compra.html?curso=${encodeURIComponent(currentCourse.name)}&precio=${encodeURIComponent(currentCourse.price)}`;
+
+        window.location.href = url;
+
     });
 });

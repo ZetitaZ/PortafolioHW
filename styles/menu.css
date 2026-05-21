@@ -4,7 +4,7 @@ header {
   top: 0;
   width: 100dvw;
   height: 80px;
-  background-color: var(--gris-pizarra);
+  background-color: var(--fondo-azul-marino-profundo);
   box-shadow: 0px 1px 5px #fff;
   z-index: 100;
 }

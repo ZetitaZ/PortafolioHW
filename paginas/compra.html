@@ -2,95 +2,117 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Apex Systems S.A.</title>
+
+    <title>Comprar Curso | Apex Systems</title>
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/c964ebe0fe.js"
-      crossorigin="anonymous"
-    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c964ebe0fe.js" crossorigin="anonymous"></script>
 
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
 
     <!--Menu navegacion-->
     <header>
-      <div class="header-container">
-        <h2 href="index.html" class="logo-link">&lt;H3llo W0rld/&gt;</h2>
-        <nav class="menu">
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="cursos.html">Información de Cursos</a></li>
-            <li><a href="proyectos.html">Nuestros Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="header-container">
+            <h2 href="index.html" class="logo-link">&lt;H3llo W0rld/&gt;</h2>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="cursos.html">Información de Cursos</a></li>
+                    <li><a href="proyectos.html">Nuestros Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section class="contact-section">
+    <section class="compra-section">
 
-        <div class="contact-container">
+        <div class="compra-container">
 
-            <h1>Solicita tu Sistema</h1>
+            <h1>Comprar Curso</h1>
 
             <p>
-                Cuéntanos qué plataforma o sistema necesitas para tu empresa gamer
-                y nuestro equipo se pondrá en contacto contigo.
+                Completa los datos para adquirir el curso.
             </p>
 
-            <form id="contact-form">
+            <form id="formCompra">
 
                 <div class="input-group">
+
                     <label>Nombre Completo</label>
+
                     <input type="text" name="nombre" required>
+
                 </div>
 
                 <div class="input-group">
+
                     <label>Correo Electrónico</label>
+
                     <input type="email" name="correo" required>
+
                 </div>
 
                 <div class="input-group">
-                    <label>Empresa</label>
-                    <input type="text" name="empresa">
+
+                    <label>Teléfono</label>
+
+                    <input type="tel" name="telefono" required>
+
                 </div>
 
                 <div class="input-group">
-                    <label>¿Qué sistema necesitas?</label>
-                    <textarea name="mensaje" rows="6"
-                        placeholder="Ejemplo: Necesitamos una plataforma para venta de productos gamer..."
-                        required></textarea>
+
+                    <label>Curso</label>
+
+                    <input type="text" id="curso" name="curso" readonly>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Precio</label>
+
+                    <input type="text" id="precio" name="precio" readonly>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Método de Pago</label>
+
+                    <select name="metodo_pago">
+
+                        <option>QR</option>
+                        <option>Tarjeta</option>
+                        <option>PayPal</option>
+                        <option>Transferencia</option>
+
+                    </select>
+
                 </div>
 
                 <button type="submit">
-                    Enviar Solicitud
+
+                    Comprar Curso
+
                 </button>
 
             </form>
 
-            <p id="respuesta"></p>
+            <div id="resultado"></div>
 
         </div>
 
     </section>
-
-    <a href="https://wa.me/59170000000?text=Hola,%20quiero%20información%20sobre%20un%20sistema." class="whatsapp-float"
-        target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
 
     <footer>
       <div class="info-footer" id="info-footer">
@@ -196,40 +218,8 @@
       </div>
     </footer>
 
-    <script>
-        emailjs.init("1oLud3HmfrL7F9iVu");
+    <script src="../js/app_compra.js"></script>
 
-        const form = document.getElementById("contact-form");
-        const respuesta = document.getElementById("respuesta");
-
-        form.addEventListener("submit", function (e) {
-
-            e.preventDefault();
-
-            emailjs.sendForm(
-                "service_tun5sqi",
-                "template_xsb728d",
-                this
-            )
-                .then(() => {
-
-                    respuesta.innerHTML = "Solicitud enviada correctamente.";
-                    respuesta.style.color = "green";
-
-                    form.reset();
-
-                })
-                .catch((error) => {
-
-                    respuesta.innerHTML = "Error al enviar la solicitud.";
-                    respuesta.style.color = "red";
-
-                    console.log(error);
-
-                });
-
-        });
-    </script>
 </body>
 
 </html>

@@ -1,0 +1,136 @@
+:root {
+  /* Base cobre */
+  --fondo-azul-marino-profundo: #0a192f;
+  --resaltado-verde-neon: #2ecc71;
+  --cobre: #b87333;
+  --cobre-oscuro: #8c4a1c;
+  --gris-pizarra: #2e2e2e;
+  --crema-tenue: #f5f2ee;
+
+  /* Tonos arena */
+  --arena-clara: #f4e1c1;
+  --beige-suave: #e6d2b5;
+  --marron-arena: #c1a57b;
+  --marron-oscuro: #5c4b32;
+  --gris-calido: #8e8268;
+
+  /* Hovers */
+  --hover-blanco: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  background: var(--arena-clara);
+  color: var(--crema-tenue);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.compra-section{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.compra-container{
+
+    width:100%;
+    max-width:700px;
+
+    background: var(--resaltado-verde-neon);
+
+    padding:40px;
+
+    border-radius:15px;
+
+    color:white;
+}
+
+.compra-container h1{
+
+    text-align:center;
+    margin-bottom:10px;
+
+    color:white;
+}
+
+.compra-container p{
+
+    text-align:center;
+    margin-bottom:30px;
+
+    color:white;
+}
+
+.input-group{
+
+    margin-bottom:20px;
+}
+
+.input-group label{
+
+    display:block;
+    margin-bottom:8px;
+}
+
+.input-group input,
+.input-group textarea{
+
+    width:96%;
+    padding:14px;
+
+    border:none;
+    border-radius:8px;
+}
+
+.input-group select {
+    width:100%;
+    padding:14px;
+
+    border:none;
+    border-radius:8px;
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+
+    border:none;
+    border-radius:8px;
+
+    background: var(--fondo-azul-marino-profundo);
+
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    background:#112a50;
+}
+
+#resultado{
+
+    margin-top:25px;
+
+    text-align:center;
+}
