@@ -1,51 +1,138 @@
+/* ===== HEADER INTRODUCTORIO ===== */
+.proyectos-header {
+  background: linear-gradient(135deg, var(--fondo-azul-marino-profundo) 0%, #0d2442 100%);
+  padding: 80px 20px 60px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.proyectos-header__contenido {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.proyectos-header__badge {
+  display: inline-block;
+  background: rgba(46, 204, 113, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--resaltado-verde-neon);
+  margin-bottom: 20px;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.proyectos-header__titulo {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.proyectos-highlight {
+  color: var(--resaltado-verde-neon);
+  position: relative;
+}
+
+.proyectos-header__descripcion {
+  font-size: 1.2rem;
+  color: #b0c4de;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+/* Estadísticas */
+.proyectos-header__stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.proyectos-stat {
+  text-align: center;
+}
+
+.proyectos-stat__numero {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--resaltado-verde-neon);
+}
+
+.proyectos-stat__label {
+  font-size: 0.9rem;
+  color: #8aa0b5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* ===== LAYOUTS ===== */
+
+.proyectos-informacion {
+  background: linear-gradient(135deg, var(--fondo-azul-marino-profundo) 0%, #0d2442 100%);
+  padding: 100px 20px;
+}
+
 .contenedor-layouts {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin: 50px auto;
-  max-width: 900px;
+  margin: 60px auto;
+  max-width: 1000px;
+  padding: 0 20px;
 }
 
-/* Layout base */
+/* Layout base*/
 .layout {
   position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, 1fr);
   height: 350px;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   transition: 0.4s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagen */
+.layout:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 15px rgba(46, 204, 113, 0.2);
+}
+
+/* Imagen*/
 .layout .imagen {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 16px;
   filter: brightness(0.8) contrast(1.05);
   transition: 0.4s ease-in-out;
 }
 
-/* Fondo difuminado */
+/* Fondo difuminado*/
 .layout .fondo {
-  border-radius: 14px;
-  /* box-shadow: 0 0 25px -8px var(--gris-pizarra); */
+  border-radius: 16px;
   transition: 0.4s;
   backdrop-filter: blur(6px);
-  /* opacity: 0.6; */
-  background-color: var(--gris-pizarra);
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.7), rgba(46, 204, 113, 0.1));
 }
 
-/* Artículo encima de la imagen (siempre visible y al frente) */
+/* Artículo */
 .layout .articulo {
   position: relative;
-  z-index: 5; /* Siempre encima de imagen y fondo */
+  z-index: 5;
   padding: 1.5rem;
   border-radius: 14px;
-  background-color: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 4px 25px -10px var(--gris-pizarra);
+  background-color: rgba(10, 25, 47, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  box-shadow: 0 4px 25px -10px rgba(0, 0, 0, 0.5);
   grid-column: 4/8;
   grid-row: 4/7;
   transition: 0.4s ease-in-out;
@@ -54,12 +141,7 @@
 /* Layout izquierdo */
 .layout-izquierdo .fondo {
   grid-column: 2/7;
-  grid-row: 2/8;
-  /* background: linear-gradient(
-    to top,
-    rgba(139, 92, 60, 0.8) 0%,
-    rgba(233, 216, 190, 0.4) 100%
-  ); */
+  grid-row: 1/8;
 }
 
 .layout-izquierdo .imagen {
@@ -68,51 +150,53 @@
   z-index: 1;
 }
 
-/* Layout derecho */
-.layout-derecho .fondo {
-  grid-column: 2/7;
-  grid-row: 2/8;
-  background: linear-gradient(
-    to top,
-    rgba(181, 143, 105, 0.8) 0%,
-    rgba(124, 85, 56, 0.5) 100%
-  );
-}
-
-.layout-derecho .imagen {
-  grid-column: 5/9;
-  grid-row: 1/6;
-  z-index: 1;
-}
-
 /* Títulos y párrafos */
 .titulo {
   font-size: 1.25rem;
   margin-bottom: 10px;
-  color: var(--cobre-oscuro);
+  color: var(--resaltado-verde-neon);
   font-weight: 600;
 }
 
 .parrafo {
   line-height: 1.5;
-  color: var(--gris-pizarra);
+  color: #e0e0e0;
   font-size: 0.95rem;
 }
 
-/* Hover sutil */
+/* Hover mejorado */
 .layout:hover .imagen {
   transform: scale(1.03);
-  filter: brightness(1) contrast(1.1);
+  filter: brightness(0.9) contrast(1.1);
 }
 
 .layout:hover .articulo {
   transform: translateY(-4px);
+  border-color: var(--resaltado-verde-neon);
+  box-shadow: 0 8px 30px rgba(46, 204, 113, 0.15);
 }
 
-/* ============================
-   📱 RESPONSIVE MODO MÓVIL
-   ============================ */
+/* ===== RESPONSIVE ===== */ 
+
 @media (max-width: 768px) {
+  .proyectos-header__titulo {
+    font-size: 2rem;
+  }
+  
+  .proyectos-header__descripcion {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .proyectos-header__stats {
+    gap: 30px;
+  }
+  
+  .proyectos-stat__numero {
+    font-size: 1.5rem;
+  }
+  
+  /* Respeto TU responsive original */
   .layout {
     display: flex;
     flex-direction: column;
@@ -123,29 +207,30 @@
     width: 100%;
     height: 220px;
     object-fit: cover;
-    border-radius: 14px 14px 0 0;
-    filter: brightness(0.9);
+    border-radius: 16px 16px 0 0;
+    filter: brightness(0.85);
   }
 
   .layout .articulo {
     grid: none;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(10, 25, 47, 0.95);
     padding: 1.2rem;
-    text-align: justify;
-    border-radius: 0 0 14px 14px;
-    box-shadow: 0 4px 15px -6px var(--gris-pizarra);
+    text-align: left;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 15px -6px rgba(0, 0, 0, 0.3);
+    border-top: none;
   }
 
   .layout .fondo {
-    display: none; /* Se elimina el fondo difuminado en móvil */
+    display: none;
   }
 
   .titulo {
     font-size: 1.15rem;
-    text-align: center;
+    text-align: left;
   }
 
   .parrafo {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }

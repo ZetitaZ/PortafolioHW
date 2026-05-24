@@ -9,6 +9,8 @@
 @import url(style_compra.css);
 :root {
   /* Base cobre */
+  --fondo-azul-marino-profundo: #0a192f;
+  --resaltado-verde-neon: #2ecc71;
   --cobre: #b87333;
   --cobre-oscuro: #8c4a1c;
   --gris-pizarra: #2e2e2e;
@@ -24,6 +26,17 @@
   /* Hovers */
   --hover-blanco: rgba(255, 255, 255, 0.6);
   scroll-behavior: smooth;
+
+  /* NUEVAS ESCALAS */
+  --verde-neon: #2ecc71;
+  --verde-neon-glow: rgba(46, 204, 113, 0.3);
+  --verde-neon-border: rgba(46, 204, 113, 0.4);
+  --verde-neon-light: rgba(46, 204, 113, 0.1);
+  --verde-neon-dark: #1f8a4c;
+
+  --azul-profundo: #0a192f;
+  --azul-profundo-glass: rgba(10, 25, 47, 0.85);
+  --azul-profundo-blur: rgba(10, 25, 47, 0.95);
 }
 
 * {
@@ -38,6 +51,7 @@ body {
   padding-top: 80px;
   width: 100%;
 }
+
 /* ===== PRESENTACIÓN ===== */
 .presentacion {
   position: relative;
@@ -46,7 +60,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--gris-pizarra);
   padding: 70px 20px;
   overflow: hidden;
 }
@@ -56,59 +69,274 @@ body {
   position: absolute;
   inset: 0;
   background: url("../img/HW-logo-rectangular.jpg") center/cover no-repeat;
-  filter: blur(12px) brightness(0.8);
-  transform: scale(1.1); /* evita bordes duros por el blur */
+  filter: blur(12px) brightness(0.7) sepia(0.2) hue-rotate(0deg) saturate(1.2);
+  transform: scale(1.1);
   z-index: 0;
+}
+
+/* Overlay con gradiente azul → verde neón (sutil) */
+.presentacion::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, var(--verde-neon-glow), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .presentacion-contenido {
   position: relative;
-  z-index: 1;
-  max-width: 800px;
-  background: var(--hover-blanco);
-  padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(4px);
+  z-index: 2;
+  max-width: 850px;
+  background: var(--azul-profundo-glass);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--verde-neon-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px var(--verde-neon-glow);
+  animation: fadeInUp 0.8s ease-out;
 }
 
+/* Badge con tono verde neón */
+.presentacion-badge {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 6px 16px;
+  background: var(--verde-neon-light);
+  border-radius: 50px;
+  border: 1px solid var(--verde-neon-border);
+}
+
+.presentacion-badge span {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: var(--resaltado-verde-neon);
+  font-weight: 600;
+}
+
+/* Título con gradiente azul → verde */
 .presentacion h1 {
   font-size: 3rem;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--cobre-oscuro);
+  background: linear-gradient(135deg, #ffffff, var(--resaltado-verde-neon));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glowPulse 3s infinite;
 }
 
 .presentacion p {
+  font-size: 1.15rem;
+  color: #e0e0e0;
+  line-height: 1.7;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--verde-neon-glow);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--verde-neon);
+  }
+}
+
+/* ===== SECCIÓN DE SERVICIOS*/
+.apex-servicios {
+  background: linear-gradient(135deg, var(--fondo-azul-marino-profundo) 0%, #0d2442 100%);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.apex-servicios__header {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.apex-servicios__badge {
+  display: inline-block;
+  background: rgba(46, 204, 113, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--resaltado-verde-neon);
+  margin-bottom: 20px;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.apex-servicios__titulo {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.apex-highlight {
+  color: var(--resaltado-verde-neon);
+  position: relative;
+  display: inline-block;
+}
+
+.apex-servicios__descripcion {
   font-size: 1.2rem;
-  color: var(--gris-pizarra);
+  color: #b0c4de;
   line-height: 1.6;
 }
 
-/* ===== INFORMACIÓN ===== */
-.informacion {
-  background-color: var(--beige-suave);
+/* Grid de tarjetas */
+.apex-servicios__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.apex-card {
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  border-radius: 24px;
+  padding: 40px 30px;
+  width: 320px;
+  transition: all 0.4s ease;
   text-align: center;
-  color: var(--gris-pizarra);
-  padding: 80px 20px;
-  transition: 0.4s;
+  cursor: pointer;
 }
 
-.info-container {
-  max-width: 900px;
-  margin: auto;
+.apex-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--resaltado-verde-neon);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(46, 204, 113, 0.2);
+  background: rgba(10, 25, 47, 0.9);
 }
 
-.informacion h2 {
-  font-size: 2rem;
-  color: var(--cobre-oscuro);
-  margin-bottom: 10px;
-  text-transform: uppercase;
+/* Icono */
+.apex-card__icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+  transition: 0.3s;
 }
 
-.informacion p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  color: var(--gris-calido);
+.apex-card__icon i {
+  font-size: 2.5rem;
+  color: var(--resaltado-verde-neon);
+}
+
+.apex-card:hover .apex-card__icon {
+  background: rgba(46, 204, 113, 0.2);
+  transform: scale(1.05);
+}
+
+/* Títulos y texto */
+.apex-card__titulo {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.apex-card__texto {
+  font-size: 1rem;
+  color: #c0d0e0;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Botón */
+.apex-card__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  background: transparent;
+  border: 1px solid var(--resaltado-verde-neon);
+  border-radius: 40px;
+  color: var(--resaltado-verde-neon);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.apex-card__btn i {
+  transition: transform 0.3s ease;
+}
+
+.apex-card__btn:hover {
+  background: var(--resaltado-verde-neon);
+  color: var(--fondo-azul-marino-profundo);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+
+.apex-card__btn:hover i {
+  transform: translateX(5px);
+  color: var(--fondo-azul-marino-profundo);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+  .info-box,
+  .reverse{
+
+    flex-direction: column;
+  }
+
+  .info-text{
+
+    text-align: center;
+  }
+
+  .presentacion-contenido {
+    padding: 25px;
+    margin: 0 15px;
+  }
+
+  .presentacion h1 {
+    font-size: 2rem;
+  }
+
+  .presentacion p {
+    font-size: 1rem;
+  }
+
+  .apex-servicios__titulo {
+    font-size: 2rem;
+  }
+  
+  .apex-servicios__descripcion {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .apex-card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+  
+  .apex-card__titulo {
+    font-size: 1.5rem;
+  }
+
 }

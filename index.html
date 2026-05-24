@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>H3ll0 W0rld - Página Principal</title>
+  <title>Apex Systems - Página Principal</title>
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,9 +16,8 @@
   <!--Menu navegacion-->
   <header>
     <div class="header-container">
-      <h2 class="logo-link">&lt;H3llo W0rld/&gt;</h2>
+      <img src="/img/logo_Apex.png" alt="" width="200px">
 
-      <!-- Botón Hamburguesa -->
       <div class="menu-toggle" id="menu-toggle">
         <span></span>
         <span></span>
@@ -28,42 +27,93 @@
       <nav class="menu" id="menu">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="paginas/cursos.html">Información de Cursos</a></li>
-          <li><a href="paginas/proyectos.html">Nuestros Proyectos</a></li>
-          <li><a href="#info-footer">Contacto</a></li>
+          <li><a href="/paginas/cursos.html">Información de Cursos</a></li>
+          <li><a href="/paginas/proyectos.html">Nuestros Proyectos</a></li>
+          <li><a href="/paginas/contacto.html">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Presentación -->
   <section class="presentacion">
     <div class="presentacion-contenido">
-      <h1>&lt;H3llo W0rld/&gt;</h1>
+      <!-- NUEVO: Badge gamer -->
+      <div class="presentacion-badge">
+        <span>🎮 POWERED BY APEX SYSTEM 🎮</span>
+      </div>
+
+      <h1>¿Qué Hacemos?</h1>
       <p>
-        Transformamos ideas en soluciones digitales innovadoras. Somos tu puerta de entrada
-        al mundo del desarrollo de software, ofreciendo servicios de desarrollo freelance
-        y capacitación especializada para la próxima generación de programadores.
+        Somos un equipo de desarrollo Freelancer, especializado en desarrollo de software y capacitación a estudiantes
+        de secundaria y universitarios.
+      </p>
+      <br>
+      <p>
+        Desarrollamos aplicaciones web y móviles especializadas, sitios web modernos y soluciones de software a medida.
+        Además, impartimos cursos de programación desde nivel básico hasta avanzado, preparando a estudiantes con las
+        habilidades más demandadas en el mercado tecnológico actual.
       </p>
     </div>
   </section>
 
-  <!-- Sección Información -->
-  <section class="informacion">
-    <div class="info-container">
-      <h2>¿Quiénes Somos?</h2>
-      <p>
-        Somos un equipo de desarrollo Freelancer, especializado en desarrollo de software
-        y capacitación a estudiantes de secundaria y universitarios.
+  <section class="apex-servicios">
+    <div class="apex-servicios__header">
+      <span class="apex-servicios__badge">QUÉ OFRECEMOS</span>
+      <h2 class="apex-servicios__titulo">
+        Soluciones <span class="apex-highlight">tecnológicas</span> para el mundo gamer
+      </h2>
+      <p class="apex-servicios__descripcion">
+        Desde plataformas de e-commerce para merchandising hasta sistemas de gestión y formación profesional.
       </p>
+    </div>
 
-      <h2>¿Qué Hacemos?</h2>
-      <p>
-        Desarrollamos aplicaciones web y móviles personalizadas, sitios web modernos
-        y soluciones de software a medida. Además, impartimos cursos de programación
-        desde nivel básico hasta avanzado, preparando a estudiantes con las habilidades
-        más demandadas en el mercado tecnológico actual.
-      </p>
+    <div class="apex-servicios__grid">
+
+      <!-- Tarjeta 1 - Soluciones Gamer -->
+      <div class="apex-card">
+        <div class="apex-card__icon">
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <h3 class="apex-card__titulo">Soluciones Gamer</h3>
+        <p class="apex-card__texto">
+          Creamos plataformas digitales para empresas de videojuegos y merchandising.
+          Sistemas de gestión, e-commerce y más.
+        </p>
+        <a href="/paginas/proyectos.html" class="apex-card__btn">
+          Ver proyectos <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Tarjeta 2 - Capacitación Tech -->
+      <div class="apex-card">
+        <div class="apex-card__icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h3 class="apex-card__titulo">Capacitación Tech</h3>
+        <p class="apex-card__texto">
+          Cursos de programación, desarrollo web, IA y habilidades digitales
+          para estudiantes y profesionales.
+        </p>
+        <a href="/paginas/cursos.html" class="apex-card__btn">
+          Ver cursos <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Tarjeta 3 - Software a Medida -->
+      <div class="apex-card">
+        <div class="apex-card__icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h3 class="apex-card__titulo">Software a Medida</h3>
+        <p class="apex-card__texto">
+          Aplicaciones web y móviles personalizadas. Soluciones empresariales
+          adaptadas a cada necesidad.
+        </p>
+        <a href="/paginas/contacto.html" class="apex-card__btn">
+          Contactar <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -76,19 +126,19 @@
         <a href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0" target="_blank"
           class="info-contacto">
           <i class="fa-brands fa-whatsapp"></i>
-          <p>69828762</p>
+          <p>+591 73054902</p>
         </a>
 
         <!-- Correo -->
         <a href="mailto:h33l0.w0rld.bo@proton.me" class="info-contacto">
           <i class="fa-solid fa-envelope"></i>
-          <p>h3ll0.w0rld.bo@proton.me</p>
+          <p>apexsystems@gmail.com</p>
         </a>
 
         <!-- Facebook -->
         <a href="https://www.facebook.com/profile.php?id=61577173317692" target="_blank" class="info-contacto">
           <i class="fa-brands fa-facebook"></i>
-          <p>H3ll0 W0rld Bolivia</p>
+          <p>Apex Systems S.A.</p>
         </a>
       </div>
 
@@ -115,51 +165,28 @@
       <label for="check" class="nombre-desarrolladores">
         <span>&#169;</span>
         <span class="nombre">Diaz Cesar, </span>
-        <!-- <span>&#38;</span> -->
-        <span class="nombre">Solorzano Leandro</span>
+        <span class="nombre">Solorzano Leandro,</span>
+        <span class="nombre">Laredo Jhoel</span>
         <span>&#38;</span>
-        <span class="nombre">Ferrari José</span>
+        <span class="nombre">Gonzales Samuel</span>
       </label>
-      <span>&#9900; Todos los derechos reservados 2025</span>
-
-      <div class="info-desarrolladores">
-        <label for="check" class="cerrar-contacto-desarrolladores">&#215;</label>
-        <div class="info-desarrollador">
-          <a href="https://api.whatsapp.com/send/?phone=+59173054902&text&type=phone_number&app_absent=0" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            <p>
-              Cesar<br />
-              73054902
-            </p>
-          </a>
-        </div>
-        <div class="info-desarrollador">
-          <a href="https://api.whatsapp.com/send/?phone=+59173737838&text&type=phone_number&app_absent=0" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            <p>
-              Leandro<br />
-              73737838
-            </p>
-          </a>
-        </div>
-        <div class="info-desarrollador">
-          <a href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            <p>
-              José<br />
-              +591 69828762
-            </p>
-          </a>
-        </div>
-      </div>
+      <span>&#9900; Todos los derechos reservados 2026</span>
     </div>
   </footer>
 
   <!-- Botón Volver Arriba -->
-  <button id="btn-subir" title="Volver arriba">
+  <!-- <button id="btn-subir" title="Volver arriba">
     <i class="fa-solid fa-arrow-up"></i>
-  </button>
+  </button> -->
+
+  <a href="https://wa.me/59170000000?text=Hola,%20quiero%20información%20sobre%20un%20sistema." class="whatsapp-float"
+    target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+
 </body>
+
 <script src="js/menu-dinamico.js"></script>
 <script src="js/scroll-up.js"></script>
 

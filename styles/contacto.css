@@ -41,9 +41,9 @@ footer {
 }
 
 .info-contacto:hover p {
-  background-color: var(--hover-blanco);
-  color: var(--gris-pizarra);
-  border-radius: 5px;
+  background: rgba(46, 204, 113, 0.1);
+  text-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+  transition: 0.3s all;
 }
 
 .fa-solid,
@@ -70,11 +70,9 @@ footer {
 }
 
 .opcion-menu:hover p {
-  background-color: var(--hover-blanco);
-  color: var(--gris-pizarra);
-  border-radius: 5px;
-
-  /* font-weight: bold; */
+  background: rgba(46, 204, 113, 0.1);
+  text-shadow: 0 0 8px rgba(46, 204, 113, 0.5);
+  transition: 0.3s all;
 }
 
 /* ===== DESARROLLADORES ===== */

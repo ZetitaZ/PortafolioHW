@@ -1,104 +1,104 @@
-:root {
-  /* Base cobre */
-  --fondo-azul-marino-profundo: #0a192f;
-  --resaltado-verde-neon: #2ecc71;
-  --cobre: #b87333;
-  --cobre-oscuro: #8c4a1c;
-  --gris-pizarra: #2e2e2e;
-  --crema-tenue: #f5f2ee;
-
-  /* Tonos arena */
-  --arena-clara: #f4e1c1;
-  --beige-suave: #e6d2b5;
-  --marron-arena: #c1a57b;
-  --marron-oscuro: #5c4b32;
-  --gris-calido: #8e8268;
-
-  /* Hovers */
-  --hover-blanco: rgba(255, 255, 255, 0.6);
-}
-
-body {
-  background: var(--arena-clara);
-  color: var(--crema-tenue);
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .section {
-  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--fondo-azul-marino-profundo) 0%, #0d2442 100%);
+  padding: 80px 20px;
   text-align: center;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--gris-pizarra);
+  background: linear-gradient(135deg, #2ecc71, var(--resaltado-verde-neon));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 
 .text-body {
-  font-size: 1rem;
-  color: var(--gris-pizarra);
+  font-size: 1.1rem;
+  color: #b0c4de;
   max-width: 700px;
   margin: 0 auto 2rem;
+  line-height: 1.6;
 }
 
+/* Grid de cursos */
 .course-grid {
   margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Tarjeta de curso */
 .course-card {
-  background: var(--resaltado-verde-neon);
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  width: 220px;
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 1.8rem;
+  border-radius: 20px;
+  width: 260px;
   text-align: center;
-  transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .course-card:hover {
-  background: #19723e;
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  border-color: var(--resaltado-verde-neon);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(46, 204, 113, 0.2);
 }
 
 .course-card h4 {
-  color: var(--arena-clara);
-  margin-bottom: 0.5rem;
+  color: var(--resaltado-verde-neon);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .course-card p {
-  color: var(--beige-suave);
-  font-size: 0.95rem;
-  min-height: 60px;
+  color: #c0d0e0;
+  font-size: 0.9rem;
+  min-height: 70px;
+  line-height: 1.5;
 }
 
+/* Botón dentro de tarjeta */
 .button-link {
-  background: var(--fondo-azul-marino-profundo);
-  color: white;
-  border-radius: 8px;
-  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  background: transparent;
+  border: 1px solid var(--resaltado-verde-neon);
+  color: var(--resaltado-verde-neon);
+  border-radius: 30px;
+  padding: 8px 20px;
   cursor: pointer;
   margin-top: 1rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .button-link:hover {
-  background: #112a50;
-  color: var(--crema-tenue);
+  background: var(--resaltado-verde-neon);
+  color: var(--fondo-azul-marino-profundo);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
 }
 
+/* ===== MODAL ===== */
 #course-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(46, 46, 46, 0.95);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -107,80 +107,179 @@ body {
 }
 
 .modal-content {
-  background: var(--fondo-azul-marino-profundo);
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.95), rgba(13, 36, 66, 0.98));
+  backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 12px;
-  max-width: 600px;
+  border-radius: 24px;
+  max-width: 550px;
   width: 100%;
   position: relative;
   color: var(--crema-tenue);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(46, 204, 113, 0.1);
+  animation: modalFadeIn 0.3s ease-out;
 }
 
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Botón cerrar modal */
 #close-modal {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 15px;
+  right: 20px;
   cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--arena-clara);
-  transition: color 0.2s ease;
+  font-size: 1.8rem;
+  color: var(--resaltado-verde-neon);
+  transition: all 0.2s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 #close-modal:hover {
-  color: var(--hover-blanco);
+  color: #ffffff;
+  background: rgba(46, 204, 113, 0.2);
+  transform: scale(1.1);
 }
 
+/* Título del modal */
+#modal-title {
+  font-size: 1.8rem;
+  color: var(--resaltado-verde-neon);
+  margin-bottom: 1rem;
+  padding-right: 30px;
+  border-left: 3px solid var(--resaltado-verde-neon);
+  padding-left: 15px;
+}
+
+/* Descripción */
 #modal-description {
-  color: var(--beige-suave);
+  color: #d0e0f0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
+/* Etiquetas de información */
+.modal-content p {
+  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.modal-content p strong {
+  color: var(--resaltado-verde-neon);
+  min-width: 90px;
+}
+
+/* Temario lista */
+#modal-syllabus {
+  margin: 10px 0 15px 25px;
+  color: #c0d0e0;
+  line-height: 1.6;
+}
+
+#modal-syllabus li {
+  margin: 5px 0;
+}
+
+/* Precio destacado */
+#modal-price {
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Botón comprar en modal */
+#buy-course {
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  font-size: 1rem;
+  background: var(--resaltado-verde-neon);
+  color: var(--fondo-azul-marino-profundo);
+  border: none;
+}
+
+#buy-course:hover {
+  background: #1f8a4c;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(46, 204, 113, 0.3);
+}
+
+/* Texto adicional */
 #modal-target {
   color: var(--gris-calido);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   margin-top: 0.5rem;
+  font-style: italic;
 }
 
-/* 🔹 Ajuste general del modal */
-#course-modal {
-  overflow-y: auto; /* Permite hacer scroll si el contenido es muy alto */
-  padding: 10px; /* margen interno más cómodo en móvil */
-}
-
-/* 🔹 Contenedor interno responsive */
-.modal-content {
-  width: 90%;
-  max-width: 600px;
-  padding: 1.5rem;
-  box-sizing: border-box;
-}
-
-/* 🔹 Para pantallas pequeñas (celulares en vertical) */
+/* ===== RESPONSIVE MODAL ===== */
 @media (max-width: 600px) {
   .modal-content {
     width: 95%;
-    max-height: 90vh; /* evita que se salga de la pantalla */
-    overflow-y: auto; /* scroll interno si es muy largo */
-    padding: 1rem;
-    font-size: 0.9rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 1.2rem;
   }
 
   #close-modal {
-    top: 5px;
-    right: 10px;
-    font-size: 1.3rem;
+    top: 10px;
+    right: 12px;
+    font-size: 1.5rem;
   }
 
-  .modal-content ul {
-    padding-left: 1.2rem; /* corrige la sangría en móvil */
+  #modal-title {
+    font-size: 1.4rem;
+    padding-right: 20px;
+  }
+
+  .modal-content p strong {
+    min-width: 80px;
+  }
+
+  #modal-syllabus {
+    margin-left: 20px;
   }
 }
 
-/* 🔹 En tablets o pantallas medianas */
 @media (min-width: 601px) and (max-width: 900px) {
   .modal-content {
-    width: 70%;
-    padding: 1.5rem;
+    width: 80%;
+    padding: 1.8rem;
+  }
+}
+
+/* Responsive para tarjetas */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .text-body {
     font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .course-card {
+    width: calc(100% - 40px);
+    max-width: 300px;
   }
 }
