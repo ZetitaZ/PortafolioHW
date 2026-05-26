@@ -1,259 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>H3ll0 W0rld - Cursos</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/c964ebe0fe.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <!--Menu navegacion-->
-    <header>
-      <div class="header-container">
-        <img src="/img/logo_Apex.png" alt="" width="200px">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Systems - Cursos</title>
+  <link rel="stylesheet" href="../styles/style.css" />
 
-        <!-- Botón Hamburguesa -->
-        <div class="menu-toggle" id="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/c964ebe0fe.js" crossorigin="anonymous"></script>
+</head>
 
-        <nav class="menu" id="menu">
-          <ul>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./cursos.html">Información de Cursos</a></li>
-            <li><a href="./proyectos.html">Nuestros Proyectos</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
+<body>
+  <!--Menu navegacion-->
+  <header>
+    <div class="header-container">
+      <img src="/img/logo_Apex.png" alt="" width="200px">
+
+      <!-- Botón Hamburguesa -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-    </header>
 
-    <section id="our-work" class="section dark visible">
-      <h3 class="title">Nuestros cursos</h3>
-      <p class="text-body">
-        Creamos experiencias de aprendizaje que combinan práctica, curiosidad y
-        comunidad. Explora algunos de nuestros cursos destacados.
-      </p>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./servicios.html">Servicios</a></li>
+          <li><a href="./cursos.html">Información de Cursos</a></li>
+          <li><a href="./proyectos.html">Nuestros Proyectos</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <div class="course-grid">
-        <div class="course-card" data-course="Bases de datos">
-          <h4 class="hw">Bases de datos</h4>
-          <p>
-            Curso práctico centrado en la organización y manejo de información
-            dentro de proyectos de programación.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
+  <section id="our-work" class="section dark visible">
+    <h3 class="title">Nuestros cursos</h3>
+    <p class="text-body">
+      Creamos experiencias de aprendizaje que combinan práctica, curiosidad y
+      comunidad. Explora algunos de nuestros cursos destacados.
+    </p>
 
-        <div class="course-card" data-course="Programación básica">
-          <h4 class="hw">Programación básica</h4>
-          <p>
-            Curso diseñado para adquirir habilidades fundamentales de
-            programación mediante ejercicios y proyectos breves.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
-
-        <div class="course-card" data-course="HTML + CSS + JS">
-          <h4 class="hw">HTML + CSS + JS</h4>
-          <p>
-            Curso enfocado en la creación de páginas web funcionales y modernas.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
-
-        <div class="course-card" data-course="Lógica de programación">
-          <h4 class="hw">Lógica de programación</h4>
-          <p>
-            Curso orientado a fortalecer el pensamiento lógico aplicado a la
-            programación.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
-
-        <div class="course-card" data-course="Node.js">
-          <h4 class="hw">Node.js</h4>
-          <p>
-            Curso práctico sobre desarrollo del lado del servidor utilizando
-            Node.js.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
-
-        <div class="course-card" data-course="IA para el estudio">
-          <h4 class="hw">IA para el estudio</h4>
-          <p>
-            Descubre cómo usar inteligencia artificial para organizar tu tiempo,
-            repasar contenidos y mejorar tus calificaciones.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
-
-        <div class="course-card" data-course="IA para idiomas">
-          <h4 class="hw">IA para idiomas</h4>
-          <p>
-            Acelera tu aprendizaje de idiomas con asistentes de IA:
-            conversación, pronunciación y vocabulario personalizado.
-          </p>
-          <button class="button-link small view-course">Ver más</button>
-        </div>
-      </div>
-    </section>
-
-    <div id="course-modal">
-      <div class="modal-content">
-        <span id="close-modal">&times;</span>
-        <h4 class="hw" id="modal-title"></h4>
-        <p id="modal-description"></p>
-
-        <p><strong>Duración:</strong> <span id="modal-duration"></span></p>
-        <p><strong>Temario:</strong></p>
-        <ul id="modal-syllabus"></ul>
+    <div class="course-grid">
+      <div class="course-card" data-course="Bases de datos">
+        <h4 class="hw">Bases de datos</h4>
         <p>
-          <strong>Requisitos:</strong>
-          <span id="modal-requirements"></span>
+          Curso práctico centrado en la organización y manejo de información
+          dentro de proyectos de programación.
         </p>
-        <p><strong>Costo:</strong> <span id="modal-price"></span></p>
-        <p id="modal-target"></p>
-        <button id="buy-course" class="button-link small">
-          Comprar
-        </button>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+
+      <div class="course-card" data-course="Programación básica">
+        <h4 class="hw">Programación básica</h4>
+        <p>
+          Curso diseñado para adquirir habilidades fundamentales de
+          programación mediante ejercicios y proyectos breves.
+        </p>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+
+      <div class="course-card" data-course="HTML + CSS + JS">
+        <h4 class="hw">HTML + CSS + JS</h4>
+        <p>
+          Curso enfocado en la creación de páginas web funcionales y modernas.
+        </p>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+
+      <div class="course-card" data-course="Lógica de programación">
+        <h4 class="hw">Lógica de programación</h4>
+        <p>
+          Curso orientado a fortalecer el pensamiento lógico aplicado a la
+          programación.
+        </p>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+
+      <div class="course-card" data-course="Node.js">
+        <h4 class="hw">Node.js</h4>
+        <p>
+          Curso práctico sobre desarrollo del lado del servidor utilizando
+          Node.js.
+        </p>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+
+      <div class="course-card" data-course="IA para el estudio">
+        <h4 class="hw">IA para el estudio</h4>
+        <p>
+          Descubre cómo usar inteligencia artificial para organizar tu tiempo,
+          repasar contenidos y mejorar tus calificaciones.
+        </p>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+
+      <div class="course-card" data-course="IA para idiomas">
+        <h4 class="hw">IA para idiomas</h4>
+        <p>
+          Acelera tu aprendizaje de idiomas con asistentes de IA:
+          conversación, pronunciación y vocabulario personalizado.
+        </p>
+        <button class="button-link small view-course">Ver más</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="course-modal">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <h4 class="hw" id="modal-title"></h4>
+      <p id="modal-description"></p>
+
+      <p><strong>Duración:</strong> <span id="modal-duration"></span></p>
+      <p><strong>Temario:</strong></p>
+      <ul id="modal-syllabus"></ul>
+      <p>
+        <strong>Requisitos:</strong>
+        <span id="modal-requirements"></span>
+      </p>
+      <p><strong>Costo:</strong> <span id="modal-price"></span></p>
+      <p id="modal-target"></p>
+      <button id="buy-course" class="button-link small">
+        Comprar
+      </button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/59170000000?text=Hola,%20quiero%20información%20sobre%20un%20sistema." class="whatsapp-float"
+    target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <!--Footer-->
+  <footer>
+    <div class="info-footer" id="info-footer">
+      <!-- Contacto -->
+      <div class="contacto">
+        <!-- Whatsapp -->
+        <a href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0" target="_blank"
+          class="info-contacto">
+          <i class="fa-brands fa-whatsapp"></i>
+          <p>+591 730254902</p>
+        </a>
+
+        <!-- Correo -->
+        <a href="mailto:h3ll0.w0rld.bo@proton.me" class="info-contacto">
+          <i class="fa-solid fa-envelope"></i>
+          <p>apexsystems@gmail.com</p>
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61577173317692" target="_blank" class="info-contacto">
+          <i class="fa-brands fa-facebook"></i>
+          <p>Apex Systems S.A.</p>
+        </a>
+      </div>
+
+      <!-- Separador Vertical -->
+      <div class="linea-vertical"></div>
+
+      <!-- Menu del footer -->
+      <div class="menu-footer">
+        <a href="./paginas/cursos.html" class="opcion-menu">
+          <i class="fa-solid fa-handshake"></i>
+          <p>Información de Cursos</p>
+        </a>
+        <a href="paginas/proyectos.html" class="opcion-menu">
+          <i class="fa-solid fa-notes-medical"></i>
+          <p>Nuestros Servicios</p>
+        </a>
       </div>
     </div>
 
-    <a href="https://wa.me/59170000000?text=Hola,%20quiero%20información%20sobre%20un%20sistema." class="whatsapp-float"
-        target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
+    <!-- Creditos -->
+    <div class="desarrollo">
+      <input type="checkbox" name="cesar" id="check" />
 
-    <!--Footer-->
-    <footer>
-      <div class="info-footer" id="info-footer">
-        <!-- Contacto -->
-        <div class="contacto">
-          <!-- Whatsapp -->
-          <a
-            href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0"
-            target="_blank"
-            class="info-contacto"
-          >
+      <label for="check" class="nombre-desarrolladores">
+        <span>&#169;</span>
+        <span class="nombre">Diaz Cesar, </span>
+        <!-- <span>&#38;</span> -->
+        <span class="nombre">Solorzano Leandro,</span>
+        <span class="nombre">Laredo Jhoel,</span>
+        <span>&#38;</span>
+        <span class="nombre">Gonzales Samuel</span>
+      </label>
+      <span>&#9900; Todos los derechos reservados 2026</span>
+
+      <div class="info-desarrolladores">
+        <label for="check" class="cerrar-contacto-desarrolladores">&#215;</label>
+        <div class="info-desarrollador">
+          <a href="https://api.whatsapp.com/send/?phone=+59173054902&text&type=phone_number&app_absent=0"
+            target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
-            <p>+591 730254902</p>
-          </a>
-
-          <!-- Correo -->
-          <a href="mailto:h3ll0.w0rld.bo@proton.me" class="info-contacto">
-            <i class="fa-solid fa-envelope"></i>
-            <p>apexsystems@gmail.com</p>
-          </a>
-
-          <!-- Facebook -->
-          <a
-            href="https://www.facebook.com/profile.php?id=61577173317692"
-            target="_blank"
-            class="info-contacto"
-          >
-            <i class="fa-brands fa-facebook"></i>
-            <p>Apex Systems S.A.</p>
+            <p>
+              Cesar<br />
+              +591 73054902
+            </p>
           </a>
         </div>
-
-        <!-- Separador Vertical -->
-        <div class="linea-vertical"></div>
-
-        <!-- Menu del footer -->
-        <div class="menu-footer">
-          <a href="./paginas/cursos.html" class="opcion-menu">
-            <i class="fa-solid fa-handshake"></i>
-            <p>Información de Cursos</p>
+        <div class="info-desarrollador">
+          <a href="https://api.whatsapp.com/send/?phone=+59173737838&text&type=phone_number&app_absent=0"
+            target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>
+              Leandro<br />
+              +591 73737838
+            </p>
           </a>
-          <a href="paginas/proyectos.html" class="opcion-menu">
-            <i class="fa-solid fa-notes-medical"></i>
-            <p>Nuestros Servicios</p>
+        </div>
+        <div class="info-desarrollador">
+          <a href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0"
+            target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p>
+              José<br />
+              +591 69828762
+            </p>
           </a>
         </div>
       </div>
+    </div>
+  </footer>
 
-      <!-- Creditos -->
-      <div class="desarrollo">
-        <input type="checkbox" name="cesar" id="check" />
+  <!-- Botón Volver Arriba -->
+  <button id="btn-subir" title="Volver arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
-        <label for="check" class="nombre-desarrolladores">
-          <span>&#169;</span>
-          <span class="nombre">Diaz Cesar, </span>
-          <!-- <span>&#38;</span> -->
-          <span class="nombre">Solorzano Leandro,</span>
-          <span class="nombre">Laredo Jhoel,</span>
-          <span>&#38;</span>
-          <span class="nombre">Gonzales Samuel</span>
-        </label>
-        <span>&#9900; Todos los derechos reservados 2026</span>
+</body>
+<script src="../js/menu-dinamico.js"></script>
+<script src="../js/scroll-up.js"></script>
+<script src="../js/informacion-cursos.js"></script>
 
-        <div class="info-desarrolladores">
-          <label for="check" class="cerrar-contacto-desarrolladores"
-            >&#215;</label
-          >
-          <div class="info-desarrollador">
-            <a
-              href="https://api.whatsapp.com/send/?phone=+59173054902&text&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              <p>
-                Cesar<br />
-                +591 73054902
-              </p>
-            </a>
-          </div>
-          <div class="info-desarrollador">
-            <a
-              href="https://api.whatsapp.com/send/?phone=+59173737838&text&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              <p>
-                Leandro<br />
-                +591 73737838
-              </p>
-            </a>
-          </div>
-          <div class="info-desarrollador">
-            <a
-              href="https://api.whatsapp.com/send/?phone=+59169828762&text&type=phone_number&app_absent=0"
-              target="_blank"
-            >
-              <i class="fa-brands fa-whatsapp"></i>
-              <p>
-                José<br />
-                +591 69828762
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Botón Volver Arriba -->
-    <button id="btn-subir" title="Volver arriba">
-      <i class="fa-solid fa-arrow-up"></i>
-    </button>
-
-  </body>
-  <script src="../js/menu-dinamico.js"></script>
-  <script src="../js/scroll-up.js"></script>
-  <script src="../js/informacion-cursos.js"></script>
 </html>

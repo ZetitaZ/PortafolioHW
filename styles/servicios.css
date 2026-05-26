@@ -1,0 +1,197 @@
+/* ===== SECCIÓN SERVICIOS ===== */
+.servicios-section {
+  background: linear-gradient(135deg, var(--fondo-azul-marino-profundo) 0%, #0d2442 100%);
+  padding: 120px 20px 80px;
+  min-height: 100vh;
+}
+
+.servicios-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.servicios-badge {
+  display: inline-block;
+  background: rgba(46, 204, 113, 0.15);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--resaltado-verde-neon);
+  margin-bottom: 20px;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.servicios-titulo {
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.servicios-highlight {
+  color: var(--resaltado-verde-neon);
+  position: relative;
+}
+
+.servicios-descripcion {
+  font-size: 1.1rem;
+  color: #b0c4de;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Grid de servicios */
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Tarjeta de servicio */
+.servicio-card {
+  background: rgba(10, 25, 47, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(46, 204, 113, 0.2);
+  border-radius: 24px;
+  padding: 35px 30px;
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--resaltado-verde-neon);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(46, 204, 113, 0.2);
+}
+
+/* Icono */
+.servicio-card__icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  transition: 0.3s;
+}
+
+.servicio-card__icon i {
+  font-size: 2.5rem;
+  color: var(--resaltado-verde-neon);
+}
+
+.servicio-card:hover .servicio-card__icon {
+  background: rgba(46, 204, 113, 0.2);
+  transform: scale(1.05);
+}
+
+/* Título */
+.servicio-card__titulo {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Descripción */
+.servicio-card__descripcion {
+  font-size: 0.95rem;
+  color: #c0d0e0;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  min-height: 70px;
+}
+
+/* Precio */
+.servicio-card__precio {
+  margin-bottom: 25px;
+  padding: 8px 0;
+}
+
+.precio-numero {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--resaltado-verde-neon);
+  background: rgba(46, 204, 113, 0.1);
+  padding: 6px 15px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+/* Botón */
+.servicio-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid var(--resaltado-verde-neon);
+  border-radius: 40px;
+  color: var(--resaltado-verde-neon);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.servicio-card__btn i {
+  transition: transform 0.3s ease;
+}
+
+.servicio-card__btn:hover {
+  background: var(--resaltado-verde-neon);
+  color: var(--fondo-azul-marino-profundo);
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+
+.servicio-card__btn:hover i {
+  transform: translateX(5px);
+  color: var(--fondo-azul-marino-profundo);
+}
+
+/* Botón WhatsApp específico */
+.servicio-card__btn--whatsapp {
+  border-color: #25d366;
+  color: #25d366;
+}
+
+.servicio-card__btn--whatsapp:hover {
+  background: #25d366;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicios-section {
+    padding: 100px 20px 60px;
+  }
+  
+  .servicios-titulo {
+    font-size: 2rem;
+  }
+  
+  .servicios-descripcion {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .servicio-card {
+    width: calc(100% - 40px);
+    max-width: 320px;
+    padding: 30px 25px;
+  }
+  
+  .servicio-card__titulo {
+    font-size: 1.4rem;
+  }
+}
